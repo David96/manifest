@@ -15,11 +15,14 @@
            fetch="git://github.com"
            review="review.cyanogenmod.org" />
 
+  <remote  name="priv"
+           fetch="ssh://david96@bellatrix.uberspace.com" />
+
   <default revision="refs/tags/android-5.1.0_r1"
            remote="aosp"
            sync-j="4" />
 
-  <project path="manifest" name="AOSPA/manifest" remote="github" revision="lollipop" />
+  <project path="manifest" name=":manifest" remote="priv" revision="lollipop" />
 
   <project path="build" name="AOSPA/android_build" remote="github" revision="lollipop" >
     <copyfile src="core/root.mk" dest="Makefile" />
